@@ -13,13 +13,21 @@ public class ArraysInbuilt {
     }
     public static void main(String[] args) {
 
-        String sentence="Hello world";
+        String sentence="Hello world ";
         String words="";
         String result="";
         ArraysInbuilt obj=new ArraysInbuilt();
-        for(int i=0;i<=sentence.length();i++){
-
+        for(int i=0;i<sentence.length();i++){
+            if(sentence.charAt(i)!=' '){
+                words+=sentence.charAt(i);
+            }
+            else{
+                result+= obj.reverse(words);
+                result+=" ";
+                words="";
+            }
         }
+        System.out.println(result);
 
 
 
